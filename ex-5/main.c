@@ -35,7 +35,7 @@ int main()
         printf("Symbole non reconnu\n");
     }
 
-    return 0;
+    
 
     exit(0);
     
