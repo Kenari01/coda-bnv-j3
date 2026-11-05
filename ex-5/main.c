@@ -3,30 +3,31 @@
 
 int main()
 {
-
-   char symbole;
+    char symbole;
     int nombre;
 
     printf("Choisissez un symbole (+ ou -) : ");
     scanf(" %c", &symbole);
 
-    printf("Saisissez un nombre : ");
+    printf("Saisissez un nombre différent de 0 : ");
     scanf("%d", &nombre);
 
     if (symbole == '+')
     {
-        // De 0 jusqu'au nombre
-        for (int i = 0; i <= nombre; i++)
+        int count = 0;
+        while (count <= nombre)
         {
-            printf("%d\n", i);
+            printf("%d\n", count);
+            count = count + 1;
         }
     }
     else if (symbole == '-')
     {
-        // Du nombre jusqu'à 0
-        for (int i = nombre; i >= 0; i--)
+        int count = nombre;
+        while (count >= 0)
         {
-            printf("%d\n", i);
+            printf("%d\n", count);
+            count = count - 1;
         }
     }
     else
@@ -34,5 +35,5 @@ int main()
         printf("Symbole non reconnu\n");
     }
 
-    exit(0);
+    return 0;
 }
